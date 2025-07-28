@@ -4,7 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.compose_tutorial.Navigation.NavigationWrapper
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.ui.Modifier
+import com.example.compose_tutorial.Animations.FullAnimationAsState
 import com.example.compose_tutorial.ui.theme.Compose_TutorialTheme
 
 
@@ -18,10 +22,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             Compose_TutorialTheme {
 //                MyScaffold()
-                NavigationWrapper()
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    MyInteractionSource(modifier = Modifier.padding(innerPadding))
-//                }
+//                NavigationWrapper()
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    FullAnimationAsState(modifier = Modifier.padding(innerPadding))
+                }
             }
         }
     }
