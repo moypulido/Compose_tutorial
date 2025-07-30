@@ -1,15 +1,29 @@
+# Archivos generados por Android Studio
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.idea/
+
+# Configuraciones específicas de usuario
 local.properties
+.DS_Store
+
+# Output de compilación
+/build/
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Gradle y cache
+.gradle/
+**/build/
+
+# Archivos de sistema
+Thumbs.db
+*.log
+
+# Configuración específica del IDE
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml

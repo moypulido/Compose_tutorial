@@ -2,16 +2,18 @@ package com.example.compose_tutorial.Navigation.Models
 
 import android.net.Uri
 import android.os.Build
+import android.os.Bundle
 import android.os.Parcelable
 import androidx.navigation.NavType
-import androidx.savedstate.SavedState
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 inline fun <reified T : Parcelable> createGenericType(): NavType<T> {
     return object : NavType<T>(isNullableAllowed = true) {
 
         override fun put(
-            bundle: SavedState,
+            bundle: Bundle,
             key: String,
             value: T
         ) {
@@ -19,12 +21,13 @@ inline fun <reified T : Parcelable> createGenericType(): NavType<T> {
         }
 
         override fun get(
-            bundle: SavedState,
+            bundle: Bundle,
             key: String
         ): T? {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                 bundle.getParcelable(key, T::class.java)
             } else {
+                @Suppress("DEPRECATION")
                 bundle.getParcelable(key)
             }
         }
