@@ -16,7 +16,7 @@ import com.example.compose_tutorial.Navigation.Examples.HomeScreen
 import com.example.compose_tutorial.Navigation.Examples.LoginScreen
 import com.example.compose_tutorial.Navigation.Examples.SettingsScreen
 import com.example.compose_tutorial.Navigation.Models.SettingsModel
-import com.example.compose_tutorial.Navigation.Models.createGenericType
+import com.example.compose_tutorial.Navigation.Types.createGenericType
 import kotlin.reflect.typeOf
 
 @Composable

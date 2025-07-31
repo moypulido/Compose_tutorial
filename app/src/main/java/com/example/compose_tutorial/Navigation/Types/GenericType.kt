@@ -1,12 +1,10 @@
-package com.example.compose_tutorial.Navigation.Models
+package com.example.compose_tutorial.Navigation.Types
 
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Parcelable
 import androidx.navigation.NavType
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
 inline fun <reified T : Parcelable> createGenericType(): NavType<T> {
