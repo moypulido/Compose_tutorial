@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
-import com.example.compose_tutorial.Animations.FullAnimationAsState
+import com.example.compose_tutorial.Animations.MyInfiniteTransition
 import com.example.compose_tutorial.ui.theme.Compose_TutorialTheme
 
 
@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
 //                MyScaffold()
 //                NavigationWrapper()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    FullAnimationAsState(modifier = Modifier.padding(innerPadding))
+                    MyInfiniteTransition(modifier = Modifier.padding(innerPadding))
                 }
             }
         }

@@ -14,8 +14,12 @@ import com.example.compose_tutorial.Navigation.Models.SettingsModel
 @Composable
 fun SettingsScreen(
     modifier: Modifier = Modifier,
-    settingsModel: SettingsModel,
-    onClickNavButton: () -> Unit,
+    settingsModel: SettingsModel = SettingsModel(
+        userId = "12345",
+        name = "John Doe",
+        theme = "Light"
+    ),
+    onClickNavButton: () -> Unit = { }
 ) {
     Column(
         verticalArrangement = Arrangement.Center,
